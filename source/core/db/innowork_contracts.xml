@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<database>
+
+    <table name="innowork_contracts">
+
+        <field name="id" type="integer" notnull="1"/>
+        <field name="ownerid" type="integer" notnull="1"/>
+        <field name="trashed" type="boolean"/>
+        <field name="customerid" type="integer"/>
+        <field name="projectid" type="integer"/>
+        <field name="description" type="text"/>
+        <field name="subscriptiondate" type="timestamp"/>
+        <field name="expirationdate" type="timestamp"/>
+        <field name="periodicity" type="integer"/>
+        <field name="contractvalue" type="decimal" length="15,2"/>
+        <field name="contracttype" type="integer"/>
+        <field name="done" type="boolean"/>
+        <field name="number" type="integer"/>
+        <field name="accountmanager" type="text"/>
+
+        <key field="id" type="unique"/>
+
+    </table>
+
+    <sequence name="innowork_contracts_id_seq"/>
+
+</database>

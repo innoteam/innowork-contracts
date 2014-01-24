@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<database>
+
+    <table name="innowork_contracts_expirations">
+
+        <field name="id" type="integer" notnull="1"/>
+        <field name="contractid" type="integer"/>
+        <field name="expirationdate" type="timestamp"/>
+        <field name="description" type="text" length="200"/>
+        <field name="amount" type="decimal" length="15,2"/>
+        <field name="eventid" type="integer"/>
+
+        <key field="id" type="unique"/>
+
+    </table>
+
+    <sequence name="innowork_contracts_expirations_id_seq"/>
+
+</database>

@@ -1,0 +1,78 @@
+<?xml version='1.0'?>
+<application>
+
+	<definition>
+		<idname>innowork-contracts</idname>
+		<release>
+			<version>2.0.0</version>
+			<date>2014/01/24</date>
+			<changesfile>CHANGES</changesfile>
+		</release>
+		<description>Contracts management</description>
+		<category>intranet</category>
+		<iconfile></iconfile>
+		<dependencies>
+			<dependency>innomatic[6.2]</dependency>
+			<dependency>innowork-core[3.1]</dependency>
+			<dependency>phplotlib[5.0-3]</dependency>
+			<dependency>innowork-groupware[2.0]</dependency>
+			<dependency>innowork-projects</dependency>
+		</dependencies>
+		<options>
+			<!-- <option></option> -->
+		</options>
+		<legal>
+			<author>
+				<name>Innoteam Srl</name>
+				<email>info@innoteam.it</email>
+				<web>http://www.innoteam.it/</web>
+			</author>
+			<copyright>Copyright (c) 2003-2014 Innoteam Srl</copyright>
+			<license>Commercial</license>
+			<licensefile>LICENSE</licensefile>
+		</legal>
+		<support>
+			<supportemail>helpdesk@innoteam.it</supportemail>
+			<bugsemail>helpdesk@innoteam.it</bugsemail>
+			<maintainer>
+				<name>Innoteam Srl</name>
+				<email>helpdesk@innoteam.it</email>
+			</maintainer>
+		</support>
+	</definition>
+
+	<components>
+
+		<domaingroup name="sales"
+			catalog="innowork-contracts::misc" />
+
+        <catalog name="innowork-contracts" />
+
+		<domainpanel name="innoworkcontracts"
+			file="innoworkcontracts.php" category="sales" themeicon="xedit"
+			themeicontype="apps" catalog="innowork-contracts::misc" />
+
+		<domainpanel name="innoworkcontractsprefs"
+			file="innoworkcontractsprefs.php" category="preferences"
+			themeicon="xedit" themeicontype="apps"
+			catalog="innowork-contracts::misc" />
+
+		<domaintable name="innowork_contracts_expirations"
+			file="innowork_contracts_expirations.xml" />
+		<!--domaintable
+			name="innowork_contracts_fields_values"
+			file="innowork_contracts_fields_values.xml"/-->
+
+		<domaintable name="innowork_contracts"
+			file="innowork_contracts.xml" />
+
+		<class name="innowork/contracts/InnoworkContract.php" />
+
+		<innoworkitemtype name="contract" file="contract"
+			catalog="innowork-contracts::misc"
+			classfile="innowork/contracts/InnoworkContract.php" classname="InnoworkContract"
+			icon="xedit" icontype="apps" domainpanel="innoworkcontracts"
+			miniicon="xedit" summaryname="contracts-name" showmode="list" />
+
+	</components>
+</application>
