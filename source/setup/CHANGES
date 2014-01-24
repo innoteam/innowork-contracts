@@ -1,3 +1,10 @@
+2.0.0 - 2013/01/24
+------------------
+CHANGES:
+- Refactoring for Innomatic 6.x. (Alex Pagnoni)
+
+
+
 1.2.1 - 2004/07/15
 ------------------
 FIXES:
